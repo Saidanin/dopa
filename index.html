@@ -379,7 +379,12 @@ html.js .reveal.in{opacity:1;transform:none}
     });
   });
 
-  function save(email){try{var k="dopa_waitlist";var a=JSON.parse(localStorage.getItem(k)||"[]");a.push({e:email,t:Date.now()});localStorage.setItem(k,JSON.stringify(a));}catch(e){}}
+  var GFORM="https://docs.google.com/forms/d/e/1FAIpQLSef3oEkckueAXZe0ADFVPqPm66xtoM45EOjRS0Wme7boSQfXA/formResponse";
+  var GENTRY="entry.1253538288";
+  function save(email){
+    try{var k="dopa_waitlist";var a=JSON.parse(localStorage.getItem(k)||"[]");a.push({e:email,t:Date.now()});localStorage.setItem(k,JSON.stringify(a));}catch(e){}
+    try{var fd=new FormData();fd.append(GENTRY,email);fetch(GFORM,{method:"POST",mode:"no-cors",body:fd});}catch(e){}
+  }
   function succeed(form){
     var box=form.closest(".hero-in,.wrap");var ok=box.querySelector(".ok");
     form.style.display="none";var micro=form.parentNode.querySelector(".micro");if(micro)micro.style.display="none";
