@@ -77,6 +77,8 @@ nav.stuck{border-color:var(--line)}
 .reserve:hover{border-color:var(--ink)}
 .reserve b{color:var(--violet-ink);font-weight:700}
 .micro{margin-top:16px;font-size:13px;color:var(--muted)}
+.trustline{margin-top:10px;font-size:12.5px;color:var(--faint);display:flex;align-items:center;gap:8px}
+.trustline::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--violet);opacity:.6;flex:none}
 .trust{margin-top:30px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--faint)}
 .trust .av{display:flex}
 .trust .av i{width:26px;height:26px;border-radius:50%;border:2px solid var(--frame);margin-left:-8px;display:block}
@@ -156,6 +158,8 @@ svg.chart{width:100%;height:auto;display:block}
 .final .reserve{color:#fff;border-color:rgba(255,255,255,.3)}
 .final .reserve b{color:#b3a4ff}
 .final .micro{color:#908c9e}
+.final .trustline{color:#938ea0}
+.final .trustline::before{background:#b3a4ff;opacity:.9}
 
 footer{padding:44px 0}
 .foot-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
@@ -206,6 +210,7 @@ html.js .reveal.in{opacity:1;transform:none}
       </form>
       <div class="ok" id="ok-top"><span class="dot"></span><span>you&rsquo;re in. we&rsquo;ll email you before launch &mdash; that&rsquo;s it.</span></div>
       <p class="micro">free to join &mdash; no spam, just one email the day it&rsquo;s ready.</p>
+      <p class="trustline">built in the open by one developer &mdash; no company, no card, no catch.</p>
     </div>
   </header>
 
@@ -348,6 +353,7 @@ html.js .reveal.in{opacity:1;transform:none}
       </form>
       <div class="ok" id="ok-bottom"><span class="dot"></span><span>you&rsquo;re in. we&rsquo;ll email you before launch &mdash; that&rsquo;s it.</span></div>
       <p class="micro">free to join &mdash; no spam, just one email the day it&rsquo;s ready.</p>
+      <p class="trustline">built in the open by one developer &mdash; no company, no card, no catch.</p>
     </div>
   </section>
 
